@@ -44,3 +44,7 @@ servos.P0.setRange(LimiteHorizMin, LimiteHorizMax)
 servos.P0.setAngle(LimiteHorizMin)
 servos.P1.setRange(LimiteVertiMin, LimiteVertiMax)
 servos.P0.setAngle(LimiteVertiMin)
+basic.forever(function () {
+    serial.writeNumber(input.lightLevel())
+    serial.writeLine("")
+})
