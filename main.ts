@@ -16,12 +16,12 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (Commutateur % 2 == 0) {
-        while (PositionHoriz <= LimiteHorizMax) {
+        while (PositionHoriz >= LimiteHorizMin) {
             PositionHoriz += -2
             servos.P0.setAngle(PositionHoriz)
         }
     } else {
-        while (PositionVertical <= LimiteVertiMax) {
+        while (PositionVertical >= LimiteVertiMin) {
             PositionVertical += -2
             servos.P1.setAngle(PositionVertical)
         }
@@ -31,10 +31,12 @@ let PositionVertical = 0
 let Commutateur = 0
 let PositionHoriz = 0
 let LimiteVertiMax = 0
+let LimiteVertiMin = 0
 let LimiteHorizMax = 0
 let LimiteHorizMin = 0
+LimiteHorizMin = 0
 LimiteHorizMax = 180
-let LimiteVertiMin = 0
+LimiteVertiMin = 0
 LimiteVertiMax = 90
 PositionHoriz = 0
 Commutateur = 0
